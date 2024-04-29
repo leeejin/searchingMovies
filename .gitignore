@@ -66,4 +66,6 @@ node_modules/
 .env
 
 .firebaserc
-.firebase
+.firebase.json
+.package-lock.json
+.package.json
