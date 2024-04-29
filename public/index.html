@@ -9,10 +9,10 @@
     <link rel="icon" href="style/image/icon.png" />
     <body>
       <nav class="menubar-top">
-          <img class="representive-mark" onclick="handleLocation()" src="style/image/icon.png"/>
+          <img class="representive-mark" id="representive-mark" src="style/image/icon.png"/>
           <div class="search-div">
-              <input type="text" placeholder="search..." id="searchText" onkeypress="if(event.keyCode==13) handleSearch()">
-              <img src="style/image/search_icon.png" class="icon-search" alt="검색 아이콘" onclick="handleSearch()">
+              <input type="text" placeholder="search..." id="searchText">
+              <img src="style/image/search_icon.png" class="icon-search" id="handleSearch" alt="검색 아이콘">
           </div>
       </nav>
   
