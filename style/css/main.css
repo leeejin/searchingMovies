@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Pretendard-extrabold';
+    src: url('../fonts/Pretendard-ExtraBold.woff2') format('woff2');
+}
+
+body {
+    margin: 0;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+input {
+    margin: 15px;
+    padding: 10px;
+    border: none;
+    width: 250px;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.search-div {
+    position: relative;
+}
+
+.icon-search {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.menubar-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, var(--background-color), var(--light-color));
+    z-index: 5;
+}
+
+.representive-mark {
+    font-family: 'Pretendard-extrabold';
+    cursor: pointer;
+
+    &:hover {
+        color: var(--white-color);
+        transition: all 0.3s;
+    }
+}
+
+.content {
+    margin-top: 100px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card {
+    float: left;
+    width: calc(25% - 20px);
+    height: 650px;
+    margin: 10px;
+    position: relative;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.5s;
+    }
+}
+
+#img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#overviewDiv{
+    border-radius: 10px;
+    height:480px;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    padding:10px;
+    opacity:0;
+    transition: all 0.5s;
+    top:0px;
+    left: 0px;
+}
+#overview{
+    color: var(--white-color);
+    text-align: center;
+}
+@media screen and (max-width:792px){
+    .card{
+        width: calc(50% - 20px);
+    }
+    input{
+        width:200px;
+    }
+}
+@media screen and (max-width:568px){
+    .card{
+        width: calc(100% - 20px);
+    }
+}
