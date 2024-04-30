@@ -83,5 +83,5 @@ $input.addEventListener("keyup", (e) => {
 
 /** 메인으로 돌아가기 */
 $mark.addEventListener("click", () => {
-  window.location.href = "/index.html";
+  window.location.href = "/public/index.html";
 });
