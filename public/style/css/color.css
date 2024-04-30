@@ -3,3 +3,12 @@
     --light-color:#CEDFF6;
     --white-color:white;
 }
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Pretendard-extrabold';
+    src: url('../fonts/Pretendard-ExtraBold.woff2') format('woff2');
+}

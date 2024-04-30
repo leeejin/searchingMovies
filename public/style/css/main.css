@@ -1,23 +1,12 @@
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Pretendard-extrabold';
-    src: url('../fonts/Pretendard-ExtraBold.woff2') format('woff2');
-}
-
 body {
     margin: 0;
     font-family: 'Pretendard';
     font-size: 16px;
-    overflow-x: hidden;
 }
 
 input {
     margin: 15px;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     width: 250px;
     border-radius: 5px;
@@ -26,7 +15,19 @@ input {
         outline: none;
     }
 }
-
+.menubar-top {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 70px;
+    padding:10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, var(--background-color), var(--white-color));
+    z-index: 5;
+}
 .search-div {
     position: relative;
 }
@@ -39,21 +40,12 @@ input {
     cursor: pointer;
 }
 
-.menubar-top {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    text-align: center;
-    display: flex;
-    padding: 10px;
-    flex-direction: row;
-    justify-content: space-between;
-    background: linear-gradient(to bottom, var(--background-color), var(--light-color));
-    z-index: 5;
-}
 
-.representive-mark {
+.content {
+    margin-top: 100px;
+    width: 100%;
+}
+#representive-mark {
     font-family: 'Pretendard-extrabold';
     cursor: pointer;
 
@@ -63,18 +55,11 @@ input {
     }
 }
 
-.content {
-    margin-top: 100px;
-    width: 100%;
-}
-
-.card {
+#cardDiv{
     float: left;
     width: calc(25% - 20px);
     height: 650px;
     margin: 10px;
-}
-#cardDiv{
     position: relative;
     
     &:hover {
@@ -99,6 +84,9 @@ input {
     top:0px;
     left: 0px;
     cursor: pointer;
+    &:hover {
+        opacity:1;
+    }
 }
 #overview{
     color: var(--white-color);
@@ -109,7 +97,7 @@ input {
     text-align: center;
 }
 @media screen and (max-width:1200px){
-    .card{
+    #cardDiv{
         width: calc(50% - 20px);
     }
     input{
@@ -117,7 +105,7 @@ input {
     }
 }
 @media screen and (max-width:568px){
-    .card{
+    #cardDiv{
         width: calc(100% - 20px);
     }
 }
